@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4e3ee068-676b-4c09-b966-205afa078a53}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>server.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Python_Web\Python_Web\bin\wfastcgi.py" />
+    <Compile Include="Python_Web\Python_Web\class1.py" />
+    <Compile Include="Python_Web\Python_Web\obj\Debug\attach_server.py" />
+    <Compile Include="Python_Web\Python_Web\obj\Debug\visualstudio_py_debugger.py" />
+    <Compile Include="Python_Web\Python_Web\obj\Debug\visualstudio_py_repl.py" />
+    <Compile Include="Python_Web\Python_Web\obj\Debug\visualstudio_py_util.py" />
+    <Compile Include="Python_Web\Python_Web\obj\Debug\__init__.py" />
+    <Compile Include="Python_Web\Python_Web\obj\Debug\__main__.py" />
+    <Compile Include="server.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Python_Web\Python_Web\obj\Debug\Python_Web.pyproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Python_Web\" />
+    <Folder Include="Python_Web\Python_Web" />
+    <Folder Include="Python_Web\Python_Web\bin" />
+    <Folder Include="Python_Web\Python_Web\obj\" />
+    <Folder Include="Python_Web\Python_Web\obj\Debug" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
