@@ -23,6 +23,9 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     s.wfile.write(x)
     s.wfile.write("</body></html>")
 
+  def POST(self):
+    s.wfile.write("<p>It should push the event</p>")
+    s.wfile.write("</body></html>")
 
 #httpd = BaseHTTPServer.HTTPServer(("localhost", 8000), MyHandler)
 httpd = BaseHTTPServer.HTTPServer(("172.31.16.91", 8000), MyHandler)
