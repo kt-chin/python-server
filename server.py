@@ -24,9 +24,12 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     s.wfile.write("</body></html>")
 
   def do_POST(self):
-
-    s.wfile.write("<p>It should push the event</p>")
-    s.wfile.write("</body></html>")
+    self.send_response(200)
+    self.send_header("Content-type", "text/html")
+    self.end_headers()
+    self.wfile.write("<html><head><title>My first python program!</title></head>")
+    self.wfile.write("<p>It should push the event</p>")
+    self.wfile.write("</body></html>")
     
 #httpd = BaseHTTPServer.HTTPServer(("localhost", 8000), MyHandler)
 httpd = BaseHTTPServer.HTTPServer(("172.31.16.91", 8000), MyHandler)
