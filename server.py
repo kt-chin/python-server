@@ -17,9 +17,9 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     s.wfile.write("<body><p>This is a test.</p>")
     s.wfile.write("<p>Hello World!</p>")
     s.wfile.write("<p>You accessed path: %s</p>" % s.path)
-    split1 = s.path.split('/', 1)
-    split2 = split1[1].split('+', 1)
-    x = int(split2[0]) + int(split2[1])
+    #split1 = s.path.split('/', 1)
+    #split2 = split1[1].split('+', 1)
+    #x = int(split2[0]) + int(split2[1])
     s.wfile.write(x)
     s.wfile.write("</body></html>")
 
@@ -27,7 +27,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     self.send_response(200)
     self.send_header("Content-type", "text/html")
     self.end_headers()
-    self.wfile.write("<html><head><title>My first python program!</title></head>")
+    self.wfile.write("<html><head><title>My first webhook!</title></head>")
     self.wfile.write("<p>It should push the event</p>")
     self.wfile.write("</body></html>")
     
