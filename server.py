@@ -32,5 +32,6 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     self.wfile.write("</body></html>")
     
 #httpd = BaseHTTPServer.HTTPServer(("localhost", 8000), MyHandler)
-httpd = BaseHTTPServer.HTTPServer(("172.31.16.91", 8000), MyHandler)
+#httpd = BaseHTTPServer.HTTPServer(("172.31.16.91", 8000), MyHandler)
+httpd = BaseHTTPServer.HTTPServer(("52.25.5.196", 8000), MyHandler)
 httpd.serve_forever()
